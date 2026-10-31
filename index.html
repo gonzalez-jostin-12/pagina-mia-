@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriMind | Guía y Medidor de Calorías - Proyecto Personal SENA</title>
+  <meta name="description" content="Página web personal y educativa sobre cómo medir las calorías de una comida de forma fácil, práctica y precisa. Proyecto Formativo SENA.">
+  
+  <!-- Tipografía Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       ENCABEZADO Y NAVEGACIÓN
+       ========================================================================= -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#inicio" class="logo">
+        <div class="logo-badge">🥗</div>
+        <span>Nutri</span>Mind
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#metodos">Métodos de Medición</a>
+        <a href="#calculadoras" class="nav-cta">Calculadora</a>
+        <a href="#errores">Tips y Errores</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SECCIÓN HERO / INICIO
+       ========================================================================= -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-tag">
+          <span>🎓</span> Proyecto Formativo SENA
+        </div>
+        <h1>Aprende a <span>medir las calorías</span> de tu comida sin complicaciones</h1>
+        <p>
+          Una guía interactiva y práctica creada para entender qué contiene lo que comes, cómo calcular tus porciones y alcanzar tus metas nutricionales de forma consciente.
+        </p>
+        <div class="hero-buttons">
+          <a href="#calculadoras" class="btn btn-primary">
+            <span>⚖️</span> Probar Calculadora
+          </a>
+          <a href="#sobre-mi" class="btn btn-secondary">
+            <span>👤</span> Conoce al Autor
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta Interactiva de Muestra -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <h3>Plato Ejemplo (Almuerzo Típico)</h3>
+          <span style="font-weight: 700; color: var(--primary-dark);">561.5 kcal</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px;">
+          Distribución calórica según macronutrientes:
+        </p>
+
+        <div class="macro-preview">
+          <div class="macro-bar-item">
+            <div class="macro-label">
+              <span style="color: var(--macro-protein);">🍗 Proteínas (52.4g)</span>
+              <span>37%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-prot" style="width: 37%;"></div>
+            </div>
+          </div>
+
+          <div class="macro-bar-item">
+            <div class="macro-label">
+              <span style="color: var(--macro-carb);">🍚 Carbohidratos (54.6g)</span>
+              <span>39%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-carb" style="width: 39%;"></div>
+            </div>
+          </div>
+
+          <div class="macro-bar-item">
+            <div class="macro-label">
+              <span style="color: var(--macro-fat);">🥑 Grasas Saludables (13.2g)</span>
+              <span>24%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-fat" style="width: 24%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: SOBRE MÍ (PERFIL PERSONAL SENA)
+       ========================================================================= -->
+  <section class="about-me" id="sobre-mi">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Perfil del Desarrollador</div>
+        <h2>Sobre Mí</h2>
+        <p>Conoce al aprendiz detrás de este proyecto formativo del SENA.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-avatar-col">
+          <div class="avatar-wrapper">
+            <div class="avatar-img">👨‍💻</div>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Aprendiz SENA</h3>
+          <span class="badge-sena">SENA Colombia</span>
+          <p style="margin-top: 14px; font-size: 0.85rem; opacity: 0.9;">
+            Apasionado por el desarrollo web, la tecnología y el bienestar integral.
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-main);">
+              ¡Hola! Te doy la bienvenida a mi página web personal.
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.98rem; margin-bottom: 15px;">
+              Este sitio fue diseñado como evidencia formativa para el <strong>SENA</strong>, combinando habilidades de maquetación web moderna (HTML5 semántico, CSS3 responsivo y JavaScript interactivo) con una temática de alto valor cotidiano: <em>la educación nutricional y la medición precisa de las calorías</em>.
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Mi objetivo es demostrar que la programación puede resolver problemas reales, creando herramientas intuitivas que ayuden a las personas a tomar mejores decisiones sobre su alimentación.
+            </p>
+          </div>
+
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label">Institución</span>
+              <span class="meta-val">SENA Regional</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Programa</span>
+              <span class="meta-val">Análisis y Desarrollo de Software (ADSO)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Proyecto</span>
+              <span class="meta-val">Página Web Personal Temática</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Estado</span>
+              <span class="meta-val" style="color: var(--primary-dark);">En Formación Activa</span>
+            </div>
+          </div>
+
+          <div>
+            <span class="meta-label">Habilidades aplicadas en este proyecto:</span>
+            <div class="skills-tags">
+              <span class="skill-tag">HTML5 Semántico</span>
+              <span class="skill-tag">CSS3 Grid & Flexbox</span>
+              <span class="skill-tag">JavaScript ES6+</span>
+              <span class="skill-tag">Diseño Responsivo</span>
+              <span class="skill-tag">Nutrición Básica</span>
+              <span class="skill-tag">UI / UX Limpio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: FUNDAMENTOS DE LAS CALORÍAS
+       ========================================================================= -->
+  <section id="fundamentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Conceptos Clave</div>
+        <h2>¿Qué es una Caloría y cómo se compone?</h2>
+        <p>Una caloría es la unidad de energía que nuestro cuerpo obtiene de los alimentos para funcionar, respirar, moverse y pensar.</p>
+      </div>
+
+      <div class="foundations-grid">
+        <!-- Tarjeta Proteína -->
+        <div class="info-card">
+          <div class="info-icon icon-prot">🍗</div>
+          <h3>Proteínas</h3>
+          <span class="macro-value-badge badge-prot">4 kcal por cada 1 gramo</span>
+          <p>
+            Fundamentales para reparar y construir tejidos musculares, órganos y producir enzimas. Se encuentran en el pollo, huevos, pescados, legumbres y carnes magras.
+          </p>
+        </div>
+
+        <!-- Tarjeta Carbohidratos -->
+        <div class="info-card">
+          <div class="info-icon icon-carb">🍚</div>
+          <h3>Carbohidratos</h3>
+          <span class="macro-value-badge badge-carb">4 kcal por cada 1 gramo</span>
+          <p>
+            La fuente primaria y más rápida de energía para el cerebro y los músculos. Los encuentras en el arroz, plátano, avena, papas, arepas y frutas.
+          </p>
+        </div>
+
+        <!-- Tarjeta Grasas -->
+        <div class="info-card">
+          <div class="info-icon icon-fat">🥑</div>
+          <h3>Grasas</h3>
+          <span class="macro-value-badge badge-fat">9 kcal por cada 1 gramo</span>
+          <p>
+            El macronutriente más denso en energía. Es vital para regular hormonas y absorber vitaminas (A, D, E, K). Están en aceites, aguacate, frutos secos y semillas.
+          </p>
+        </div>
+
+        <!-- Tarjeta Fibra y Agua -->
+        <div class="info-card">
+          <div class="info-icon icon-scale">💧</div>
+          <h3>Agua y Fibra</h3>
+          <span class="macro-value-badge" style="background-color: #f1f5f9; color: var(--text-muted);">0 a 2 kcal aprox.</span>
+          <p>
+            No aportan calorías significativas pero son cruciales para la digestión, el control de saciedad, salud de la microbiota y la hidratación corporal.
+          </p>
+        </div>
+      </div>
+
+      <!-- Banner de la Ecuación Calórica -->
+      <div class="equation-banner">
+        <div class="equation-text">
+          <h4>La Ley de Oro del Balance Energético</h4>
+          <p>Las calorías totales de cualquier alimento se calculan sumando el aporte de sus macronutrientes:</p>
+        </div>
+        <div class="equation-formula">
+          Calorías = (Proteínas × 4) + (Carbohidratos × 4) + (Grasas × 9)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: 3 MÉTODOS PARA MEDIR CALORÍAS
+       ========================================================================= -->
+  <section class="methods" id="metodos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Paso a Paso</div>
+        <h2>3 Métodos Prácticos para Medir</h2>
+        <p>Aprende las 3 formas más utilizadas para conocer el aporte calórico de tu comida.</p>
+      </div>
+
+      <div class="methods-grid">
+        <!-- Método 1 -->
+        <div class="method-card">
+          <div class="method-number">01</div>
+          <h3>La Báscula Gramera Digital</h3>
+          <p>
+            Es el método más preciso y confiable. Pesar los alimentos en gramos elimina conjeturas y te da el valor exacto para consultar en tablas nutricionales.
+          </p>
+          <ul class="method-list">
+            <li><span class="check">✓</span> Coloca el plato vacío y presiona el botón "Tara" (cero).</li>
+            <li><span class="check">✓</span> Añade el ingrediente y anota los gramos netos.</li>
+            <li><span class="check">✓</span> Preferiblemente pesa en crudo para mayor consistencia.</li>
+          </ul>
+        </div>
+
+        <!-- Método 2 -->
+        <div class="method-card">
+          <div class="method-number">02</div>
+          <h3>Lectura de Etiquetas Nutricionales</h3>
+          <p>
+            Los alimentos empacados tienen la información obligatoria en la tabla posterior. La clave es saber interpretar el tamaño de porción.
+          </p>
+          <ul class="method-list">
+            <li><span class="check">✓</span> Revisa el número de porciones que contiene el envase.</li>
+            <li><span class="check">✓</span> Fíjate si las calorías son por 100g o por 1 porción.</li>
+            <li><span class="check">✓</span> Si te comes todo el paquete, multiplica por el número de porciones.</li>
+          </ul>
+        </div>
+
+        <!-- Método 3 -->
+        <div class="method-card">
+          <div class="method-number">03</div>
+          <h3>El Método Visual de la Mano</h3>
+          <p>
+            Perfecto para cuando comes en restaurantes o fuera de casa y no tienes báscula. Tu mano es proporcional a tu tamaño corporal.
+          </p>
+          <ul class="method-list">
+            <li><span class="check">✓</span> Palma abierta: Porción de proteína (aprox. 100-120g).</li>
+            <li><span class="check">✓</span> Puño cerrado: Porción de carbohidratos o vegetales.</li>
+            <li><span class="check">✓</span> Dedo pulgar: Porción de grasas o aceites (aprox. 10-15g).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Guía Visual Rápida de la Mano -->
+      <div class="hand-guide-grid">
+        <div class="hand-item">
+          <div class="hand-emoji">✋</div>
+          <h4>Palma de la Mano</h4>
+          <p>1 porción de Proteína (Pechuga, pescado, carne)</p>
+        </div>
+        <div class="hand-item">
+          <div class="hand-emoji">✊</div>
+          <h4>Puño Cerrado</h4>
+          <p>1 porción de Carbohidratos (Arroz, pasta, papa) o Fruta</p>
+        </div>
+        <div class="hand-item">
+          <div class="hand-emoji">👍</div>
+          <h4>Punta del Pulgar</h4>
+          <p>1 cucharada de Grasas (Aceite de oliva, mantequilla)</p>
+        </div>
+        <div class="hand-item">
+          <div class="hand-emoji">🤲</div>
+          <h4>Dos Manos Juntas</h4>
+          <p>Porción abundante de Ensaladas verdes y verduras</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: HERRAMIENTAS INTERACTIVAS (CALCULADORAS)
+       ========================================================================= -->
+  <section class="calculators-section" id="calculadoras">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Interactividad con JavaScript</div>
+        <h2>Herramientas de Medición</h2>
+        <p>Utiliza estas calculadoras para armar tu plato o conocer cuántas calorías gasta tu cuerpo al día.</p>
+      </div>
+
+      <!-- Botones de Pestañas (Tabs) -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="tab-plato">🍽️ Arma Tu Plato</button>
+        <button class="tab-btn" data-tab="tab-tdee">🔥 Gasto Calórico Diario (TDEE)</button>
+      </div>
+
+      <!-- TAB 1: ARMA TU PLATO -->
+      <div class="tab-content active" id="tab-plato">
+        <div class="plate-calculator-container">
+          <!-- Formulario para agregar -->
+          <div class="calc-box">
+            <h3>
+              <span>Agregar Alimento al Plato</span>
+              <button class="btn btn-secondary" id="btnClearPlate" style="padding: 5px 12px; font-size: 0.8rem;">
+                Vaciar Plato
+              </button>
+            </h3>
+
+            <div class="input-row">
+              <div class="form-group">
+                <label for="foodSelect">Alimento Común:</label>
+                <select id="foodSelect" class="form-control">
+                  <option value="">-- Elige un alimento --</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="foodGrams">Cantidad (gramos):</label>
+                <input type="number" id="foodGrams" class="form-control" placeholder="Ej: 150" min="1" step="1">
+              </div>
+
+              <div class="form-group" style="justify-content: flex-end;">
+                <button type="button" class="btn btn-primary" id="btnAddFood" style="height: 44px;">
+                  + Añadir
+                </button>
+              </div>
+            </div>
+
+            <!-- Lista de Alimentos Añadidos -->
+            <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 8px;">
+              Ingredientes en tu plato actual:
+            </label>
+            <div class="plate-items-list" id="plateList">
+              <!-- Se inyecta dinámicamente con JavaScript -->
+            </div>
+          </div>
+
+          <!-- Resumen de Totales y Macros -->
+          <div class="summary-card">
+            <div class="total-calories-display">
+              <span>Aporte Energético Total</span>
+              <h2 id="totalKcal">0</h2>
+              <small>Kilocalorías (kcal)</small>
+            </div>
+
+            <div class="macro-breakdown-grid">
+              <div class="macro-box prot">
+                <div class="macro-title">Proteínas</div>
+                <div class="macro-val" id="totalProt">0g</div>
+              </div>
+              <div class="macro-box carb">
+                <div class="macro-title">Carbohidratos</div>
+                <div class="macro-val" id="totalCarb">0g</div>
+              </div>
+              <div class="macro-box fat">
+                <div class="macro-title">Grasas</div>
+                <div class="macro-val" id="totalFat">0g</div>
+              </div>
+            </div>
+
+            <!-- Barras visuales de porcentaje -->
+            <div style="text-align: left; margin-top: 10px;">
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">
+                Proporción de energía por macronutriente:
+              </span>
+              <div class="progress-track" style="height: 12px; display: flex; margin-top: 8px;">
+                <div id="barProt" style="background-color: var(--macro-protein); width: 33%; transition: width 0.3s ease;"></div>
+                <div id="barCarb" style="background-color: var(--macro-carb); width: 33%; transition: width 0.3s ease;"></div>
+                <div id="barFat"  style="background-color: var(--macro-fat); width: 34%; transition: width 0.3s ease;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-top: 6px; color: var(--text-muted);">
+                <span style="color: var(--macro-protein);">■ Proteína</span>
+                <span style="color: var(--macro-carb);">■ Carbohidrato</span>
+                <span style="color: var(--macro-fat);">■ Grasa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: CALCULADORA TDEE -->
+      <div class="tab-content" id="tab-tdee">
+        <div class="tdee-calc-grid">
+          <div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Calcula tus necesidades energéticas</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+              Basada en la fórmula clínica <strong>Mifflin-St Jeor</strong>, la más precisa para estimar tu Tasa Metabólica Basal (BMR) y tu Gasto Energético Total Diario (TDEE).
+            </p>
+
+            <form id="tdeeForm">
+              <div class="input-row" style="grid-template-columns: 1fr 1fr; margin-bottom: 14px;">
+                <div class="form-group">
+                  <label for="tdeeGender">Sexo Biológico:</label>
+                  <select id="tdeeGender" class="form-control" required>
+                    <option value="male">Hombre</option>
+                    <option value="female">Mujer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="tdeeAge">Edad (años):</label>
+                  <input type="number" id="tdeeAge" class="form-control" placeholder="Ej: 22" min="10" max="100" required>
+                </div>
+              </div>
+
+              <div class="input-row" style="grid-template-columns: 1fr 1fr; margin-bottom: 14px;">
+                <div class="form-group">
+                  <label for="tdeeWeight">Peso actual (kg):</label>
+                  <input type="number" id="tdeeWeight" class="form-control" placeholder="Ej: 70" min="30" max="250" step="0.5" required>
+                </div>
+                <div class="form-group">
+                  <label for="tdeeHeight">Altura (cm):</label>
+                  <input type="number" id="tdeeHeight" class="form-control" placeholder="Ej: 175" min="100" max="230" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="tdeeActivity">Nivel de Actividad Física:</label>
+                <select id="tdeeActivity" class="form-control" required>
+                  <option value="1.2">Sedentario (Poco o nada de ejercicio, trabajo de escritorio)</option>
+                  <option value="1.375" selected>Ligero (Ejercicio ligero 1 a 3 días por semana)</option>
+                  <option value="1.55">Moderado (Ejercicio moderado 3 a 5 días por semana)</option>
+                  <option value="1.725">Fuerte (Ejercicio intenso 6 a 7 días por semana)</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Calcular Mis Calorías Diarias
+              </button>
+            </form>
+          </div>
+
+          <!-- Resultados TDEE -->
+          <div class="tdee-result-box" id="tdeeResults">
+            <h4 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--text-main);">Tus Resultados Estimados:</h4>
+
+            <div class="result-target">
+              <div>
+                <strong>Metabolismo Basal (BMR)</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Gasto mínimo para vivir en reposo total</p>
+              </div>
+              <strong id="resBMR">-- kcal</strong>
+            </div>
+
+            <div class="result-target recommended">
+              <div>
+                <strong>Mantenimiento (TDEE)</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Calorías para mantener tu peso actual</p>
+              </div>
+              <strong id="resTDEE">-- kcal</strong>
+            </div>
+
+            <div class="result-target">
+              <div>
+                <strong>Déficit Calórico</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Meta recomendada para perder grasa (~450 kcal menos)</p>
+              </div>
+              <strong id="resDeficit" style="color: #0284c7;">-- kcal</strong>
+            </div>
+
+            <div class="result-target">
+              <div>
+                <strong>Superávit Calórico</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Meta para aumento de masa muscular (+350 kcal)</p>
+              </div>
+              <strong id="resSurplus" style="color: var(--accent);">-- kcal</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: ERRORES COMUNES Y CONSEJOS
+       ========================================================================= -->
+  <section id="errores">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Mejores Prácticas</div>
+        <h2>Errores Comunes al Medir Calorías</h2>
+        <p>Aprende a evitar las trampas más habituales que sabotean el registro calórico.</p>
+      </div>
+
+      <div class="mistakes-grid">
+        <div class="mistake-card">
+          <h4><span>🍳</span> El Aceite de Cocina "Invisible"</h4>
+          <p>
+            Un chorrito de aceite en la sartén puede parecer insignificante, pero 1 sola cucharada sopera contiene aproximadamente <strong>120 a 130 calorías puras</strong> de grasa.
+          </p>
+          <div class="mistake-solution">
+            💡 <strong>Solución:</strong> Pesa o mide el aceite con cuchara medidora o usa pulverizador en spray.
+          </div>
+        </div>
+
+        <div class="mistake-card">
+          <h4><span>🥩</span> Confundir Crudo vs. Cocido</h4>
+          <p>
+            Al cocinarse, la carne pierde agua (se reduce de peso pero mantiene sus calorías) y el arroz/pasta absorbe agua (se triplica en peso sin añadir calorías).
+          </p>
+          <div class="mistake-solution">
+            💡 <strong>Solución:</strong> Decide un solo método. Es más exacto registrar todo en crudo antes de cocinar.
+          </div>
+        </div>
+
+        <div class="mistake-card">
+          <h4><span>🥤</span> Olvidar las Bebidas Líquidas</h4>
+          <p>
+            Jugos de frutas con azúcar agregada, gaseosas, tés azucarados, bebidas energéticas y cafés con leche entera suman cientos de calorías sin generar saciedad.
+          </p>
+          <div class="mistake-solution">
+            💡 <strong>Solución:</strong> Prioriza agua, infusiones o café sin azúcar añadida.
+          </div>
+        </div>
+
+        <div class="mistake-card">
+          <h4><span>🥫</span> Salsas y Aderezos Comerciales</h4>
+          <p>
+            Mayonesas, salsas tártaras y aderezos cremosos de ensalada suelen contener altos porcentajes de aceite y azúcar oculta.
+          </p>
+          <div class="mistake-solution">
+            💡 <strong>Solución:</strong> Prepara vinagretas caseras con mostaza, limón, vinagre y yogur griego natural.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN: CONTACTO
+       ========================================================================= -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Hablemos</div>
+        <h2>Contacto del Aprendiz</h2>
+        <p>¿Tienes dudas sobre este proyecto o te gustaría dejar tus comentarios para la evaluación SENA?</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div id="contactAlert" class="form-alert"></div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Nombre Completo:</label>
+            <input type="text" id="contactName" class="form-control" placeholder="Tu nombre o el de tu instructor" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Correo Electrónico:</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="ejemplo@misena.edu.co" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Asunto:</label>
+            <input type="text" id="contactSubject" class="form-control" placeholder="Retroalimentación / Consulta del proyecto" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMsg">Mensaje:</label>
+            <textarea id="contactMsg" class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="justify-content: center;">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color: white;">
+            <div class="logo-badge">🥗</div>
+            <span>Nutri</span>Mind
+          </div>
+          <p>
+            Proyecto web personal desarrollado como evidencia formativa para el SENA. Enfocado en la educación alimentaria y el cálculo calórico consciente.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#fundamentos">Macronutrientes</a></li>
+            <li><a href="#metodos">Métodos de Medición</a></li>
+            <li><a href="#calculadoras">Calculadora</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formación SENA</h4>
+          <ul>
+            <li>Regional Colombia</li>
+            <li>Centro de Formación Técnica</li>
+            <li>Evidencia de Maquetación Web</li>
+            <li>Tecnología e Innovación</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="currentYear">2026</span> NutriMind - Proyecto Educativo Personal. Creado por Aprendiz SENA. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
